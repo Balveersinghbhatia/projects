@@ -1,0 +1,145 @@
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+/* header section */
+
+.top_nav {
+    display: flex;
+    flex-direction: row;
+    /* defualt */
+    box-sizing: border-box;
+}
+
+h4 {
+    margin-left: 500px;
+    margin-top: 25px;
+    font-size: large;
+}
+
+ul {
+    margin: 20px 600px 10px 0;
+}
+
+.nav_items {
+    list-style-type: none;
+    margin: 0 10px;
+    display: inline-block;
+    font-size: 150%;
+}
+
+.active {
+    border-bottom: 3px solid #59ec03;
+    font-weight: bold;
+    color: #59ec03;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #59ec03;
+    width: 100px;
+    border-bottom: #59ec03 2px solid;
+}
+
+
+/* Main section from here */
+
+.badiya {
+    display: flex;
+    background: url("/images/index.jpeg") no-repeat;
+    background-size: cover;
+    height: 520px;
+}
+
+.first {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 1250px;
+}
+
+.first>h1 {
+    align-self: center;
+    margin: 50px 0 0 0;
+    font-size: xxx-large;
+    font-weight: normal;
+    font-family: 'Arvo', serif;
+}
+
+.first>p {
+    width: 50%;
+    padding: 10px;
+    font-size: 145%;
+    font-family: 'Lora', serif;
+    align-self: center;
+    margin: 35px 0 0 0
+}
+
+.first>button {
+    margin: 25px 0 0 0;
+    align-self: center;
+    background: rgb(39, 39, 39);
+    border: none;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    width: 120px;
+    padding: 10px;
+}
+
+img.main_svg {
+    align-self: flex-start;
+    height: 400px;
+    margin: 50px 0 0 0;
+}
+
+
+/* Section 2 after main */
+
+.second {
+    display: flex;
+    flex-direction: column;
+}
+
+.second>h3 {
+    align-self: center;
+    color: #59ec03;
+    font-size: 150%;
+}
+
+.second>p {
+    align-self: center;
+    font-size: 120%;
+}
+
+.container {
+    display: flex;
+    width: 50%;
+    margin: auto;
+}
+
+.items_container {
+    margin: 0 10px;
+    display: inline-block;
+    /* border: 1px solid black; */
+}
+
+.items_container>h5 {
+    color: #59ec03;
+    font-size: large;
+    text-align: center;
+}
+
+img {
+    height: 150px;
+    margin-left: 70px;
+}
