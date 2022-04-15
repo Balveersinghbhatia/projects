@@ -1,147 +1,79 @@
-<!-- Trip planning website form survey-->
-<!-- Date is April 2 21-->
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>BookYourTrip</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="This is basic website asking for details to book a trip by the user">
-    <link rel="stylesheet" href="first.css" type="text/css">
-    <link rel="shortcut icon" href="images.png" type="image/x-icon">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Notes app</title>
+	<!-- We are using bootstrap for this project -->
+	<link rel="stylesheet" href="/Bootstrap/css/bootstrap.css">
+	<style>
+		#addTxt {
+			height: 150px;
+		}
+	</style>
 </head>
 
 <body>
-    <header>
-        <div class="topnav">
-            <nav class="first">
+	<nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top	">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<img src="logo.png" alt="" width="175px">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active fw-bold" aria-current="page" href="#">HOME</a>
+					</li>
 
-                <a href="index.html">Home</a>
-                <a href="#10" title="Go to contact section">Contact</a>
-                <a href="#15" title="Go to about me section">About</a>
-                <a href="other pages.html">Projects</a>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <div>
+				</ul>
+				<form class="d-flex">
+					<input id="searchTxt" class="form-control me-2" type="search" placeholder="Search"
+						aria-label="Search">
+					<button id="searchBtn" class="btn btn-outline-success" type="submit">Search</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+	<div class="container my-5">lambo</div>
+	<div class="container my-5">
+		<div class="card">
+			<div class="card-body">
+				<h1 class="text-center">Welcome to my Notes taking app</h1>
+				<h5 class="card-title"> Add a note</h5>
+				<div class="input-group mb-3">
+					<input id="addTitle" type="text" class="form-control" placeholder="Title">
+				</div>
+				<div class="input-group">
+					<textarea id="addTxt" class="form-control"
+						aria-label="With textarea" placeholder="Content"></textarea>
+				</div>
+				<button id="saveBtn" class="my-2 btn btn-warning">Save it</button>
+				<hr>
+				<h1>Your Notes</h1>
+				<hr>
+				<div id="notes" class="container-fluid row">
+					<!-- <div class="card my-2 mx-2" style="width: 18rem;">
+						<div class="card-body">
+							<h5 class="card-title">Notes title</h5>
+							<p class="card-text">content.</p>
+							<a href="#" class="btn btn-warning">Delete Note</a>
+						</div>
+					</div> -->
+					<!-- this is just the body for notes we will add them using js -->
+				</div>
+			</div>
+		</div>
 
-            <p class="para"> Enter your detils to book your trip to Goa</p>
-            <form action="actionpage.php">
-                <fieldset>
-                    <legend>Your Info</legend>
-                    <label for="Fname">First name:</label>
-                    <input type="text" autofocus name="Fname" id="Fname" placeholder="Enter your first name">
-                    <br>
-                    <label for="Lname">Last name:</label>
-                    <input type="text" name="Lname" id="Lname" placeholder="Enter your last name">
-                    <br>
-                    <p>Enter the dates:</p>
-                    <label for="from">From</label>
-                    <input type="date" name="from" id="from">
-                    <label for="to"> To</label>
-                    <input type="date" name="to" id="to">
-                    <br>
-                    <p>How many members:</p>
-                    <input type="radio" name="members" id="2members">
-                    <label for="2members">2 members</label>
-                    <br>
-                    <input type="radio" name="members" id="3members">
-                    <label for="3members">3 members</label>
-                    <br>
-                    <input type="radio" name="members" id="4members">
-                    <label for="4members">4 members</label>
-                    <br>
-                    <input type="radio" name="members" id="5members">
-                    <label for="5members">5 members</label>
-                    <br>
-                    <label for="email">Enter your email:</label>
-                    <br>
-                    <input type="email" name="email" id="email">
-                    <br>
-                    <label for="yourno">Enter your no:</label>
-                    <br>
-                    <input type="number" name="yourno" id="yourno">
-                    <br>
-                    <input type="button" name="submit" id="submit" value="Submit">
-                    <!-- we can also do this by button element -->
-                    <input type="reset" name="" id="">
-                </fieldset>
-            </form>
-        </div>
-        <div>
-            <form action="noaction.php">
-                <fieldset>
-                    <p>Upload the documents of person who is booking.</p>
-                    <legend>Your documents</legend>
-                    <input type="file" name="Adhar" id="Adhar">
-                    <label for="Adhar">Upload Your Adhar card</label>
-                    <br>
-                    <input type="file" name="Image" id="image">
-                    <label for="image">Upload your image</label>
-                    <br>
-                    <input type="file" name="cancelcheck" id="cancelcheck">
-                    <label for="cancelcheck">Upload your cancel check</label>
-                    <br>
-                    <input type="checkbox" name="check" id="check">
-                    <label for="check">Adhar Card</label>
-                    <input type="checkbox" name="check1" id="check1">
-                    <label for="check1">Pan Card</label>
-                    <input type="checkbox" name="check3" id="check3">
-                    <label for="check3">Cancel Check</label>
-                    <input type="checkbox" name="check4" id="check4">
-                    <label for="check4">Image</label>
-                    <br>
-                    <input type="button" name="submit" id="submit" value="Submit">
-                    <input type="reset" name="" id="">
-                </fieldset>
-            </form>
-        </div>
-        <div>
-            <form action="noactions">
-                <fieldset>
-                    <legend>About Hotel</legend>
-                    <label for="rooms">How many rooms do you want</label>
-                    <br>
-                    <input type="number" name="rooms" id="rooms">
-                    <br>
-                    <label>Select Type of room: </label>
-                    <br>
-                    <input list="typeofroom">
-                    <datalist id="typeofroom">
-                        <option value="Normal">
-                        <option value="Large">
-                        <option value="Luxery">
-                        <option value="Our special">
-                        <option value="Sabse sasta jo bhi hai dedo yrr">
-                    </datalist>
-                    <br>
-                    <textarea name="textarea" id="textarea" cols="30" rows="10"
-                        placeholder="Enter your preferences"></textarea>
-                </fieldset>
-            </form>
-        </div>
-    </main>
-    <footer>
-        <p class="para" id="15" title="About me">
-            About me: My name is Balveer singh . I am doing diploma in <a
-                href="https://en.wikipedia.org/wiki/Computer_engineering" target="_blank"> <strong>computer
-                    engineering</strong></a> from
-            <strong> <a href="https://www.rcti.cteguj.in" target="_blank">Rc Technical institute</a></strong> <br /> I
-            am a student and new in this field of web development.
-            You can also check my other projects from the navigation bar.
-        </p>
-        <p class="para" id="10">
-            Contact me: <br>
-            <a href="https://twitter.com/BalveerBhatia1" target="_blank"> <img style="float:left;width:100px;"
-                    src="twitter.jpeg" alt="twitter icon"> Twitter</a>
-            <a href="https://github.com/Balveersinghbhatia" target="_blank"> <img style="float: center;width:90px;"
-                    src="github.png" alt="github icon"> Github</a>
-        </p>
-        <p> My email: <u>balveerbhatiakk@gmail.com</u> </p>
-    </footer>
+
+		<script src="/Bootstrap/js/bootstrap.js"></script>
+		<script src="script.js"></script>
 </body>
 
 </html>
